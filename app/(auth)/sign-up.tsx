@@ -55,6 +55,7 @@ const SignUp = () => {
       })
 
       if (completeSignUp.status === 'complete') {
+        console.log("Complete Sign Up", completeSignUp)
         await fetchAPI('/(api)/user', {
           method: 'POST',
           body: JSON.stringify({
@@ -62,7 +63,7 @@ const SignUp = () => {
             email: form.email,
             clerkId: completeSignUp.createdUserId,
           })
-        })
+        });
 
         await setActive({ session: completeSignUp.createdSessionId })
         setVerification({ ...verification, state: 'success' })
