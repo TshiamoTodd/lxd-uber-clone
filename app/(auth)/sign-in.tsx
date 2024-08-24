@@ -29,7 +29,7 @@ const SignIn = () => {
 
       if (signInAttempt.status === 'complete') {
         await setActive({ session: signInAttempt.createdSessionId })
-        router.replace('/(root)/(tabs)/home' as Href)
+        router.replace('/' as Href)
       } else {
         console.error(JSON.stringify(signInAttempt, null, 2))
       }
