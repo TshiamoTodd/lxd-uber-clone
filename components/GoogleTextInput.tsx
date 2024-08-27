@@ -29,7 +29,7 @@ const GoogleTextInput = ({
                 textInput: {
                     backgroundColor: textInputBackgroundColor || 'white',
                     fontSize: 16,
-                    fontWheight: 600,
+                    fontWheight: "600",
                     marginTop: 5,
                     width: '100%',
                     borderRadius: 200,

@@ -32,10 +32,6 @@ const SignUp = () => {
         emailAddress: form.email,
         password: form.password,
       })
-      console.log({
-        emailAddress: form.email,
-        password: form.password,
-      })
 
       await signUp.prepareEmailAddressVerification({ strategy: 'email_code' })
 
@@ -55,7 +51,6 @@ const SignUp = () => {
       })
 
       if (completeSignUp.status === 'complete') {
-        console.log("Complete Sign Up", completeSignUp.createdUserId)
         await fetchAPI('/(api)/user', {
           method: 'POST',
           body: JSON.stringify({
