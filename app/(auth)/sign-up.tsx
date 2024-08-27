@@ -55,7 +55,7 @@ const SignUp = () => {
       })
 
       if (completeSignUp.status === 'complete') {
-        console.log("Complete Sign Up", completeSignUp)
+        console.log("Complete Sign Up", completeSignUp.createdUserId)
         await fetchAPI('/(api)/user', {
           method: 'POST',
           body: JSON.stringify({
@@ -181,7 +181,7 @@ const SignUp = () => {
                 source={images.check}
                 className="w-[110px] h-[110px] mx-auto my-5"
               />
-              <Text className="text-3xl text-black font-JakartaBold text-center">
+              <Text className="text-3xl text-black text-center">
                 Verified
               </Text>
               <Text className="text-base text-gray-400 text-center">
